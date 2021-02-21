@@ -1,0 +1,24 @@
+check running services(odoo-bin)
+-----------------------
+ps -aux | grep odoo-bin
+
+check directory permissions
+---------------------------
+ls -ld directory
+
+changing ownerships
+-------------------
+chown name filename
+chown name foldername
+
+git submodule update --init
+
+create a compressed tar file 
+------------------------------
+tar -czf odoo_bkp_0126.tar.gz odoo_bkp_0126/
+
+remove directory recursively without prompt
+-------------------------------------------
+rm -rf <path to dir>
+
+cp -r hr_skill /opt/odoo/odoo/addons/

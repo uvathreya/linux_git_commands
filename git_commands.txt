@@ -1,0 +1,65 @@
+#create local repo
+git init
+
+# Add files to the commit
+-------------------------
+git add .
+git add ./filename.ext
+
+# Create a new commit with a message
+------------------------------------
+git commit -m "Your commit message"
+
+# Push your commits to Github
+-----------------------------
+git push origin master
+git push origin [YOUR_BRANCH_NAME]
+
+
+git clone [REPOSITORY_CLONE_URL]
+
+#Merge Develop into feature branch
+-----------------------------------
+git checkout <feature_branch>
+git merge develop
+
+# Reset your repo to the last version
+--------------------------------------
+git reset --hard
+
+# Create a new branch
+---------------------
+git checkout -b [YOUR_BRANCH_NAME]
+
+# Switch branches
+-----------------
+git checkout [YOUR_BRANCH_NAME]
+git checkout master
+
+# Reset a single file
+--------------------
+git checkout ./filename.ext
+
+# Rename branch
+----------------
+git checkout <old_name>
+git branch -m <new_name>
+**repeat below steps if the branch is already published**
+git push origin -u <new_name>
+git push origin --delete <old_name>
+
+#clear the odoo folder (if its not completely loaded from sub module)
+--------------------------------------------------------------------
+rm -rf odoo
+
+#update sub modules in the local repo
+-------------------------------------
+git submodule update --init
+
+#delete branch locally
+----------------------
+git branch -d localBranchName
+
+#delete branch remotely
+-----------------------
+git push origin --delete remoteBranchName

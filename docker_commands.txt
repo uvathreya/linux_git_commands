@@ -1,0 +1,9 @@
+running an image with tag blue and mapping hostport to container port
+---------------------------------------------------------------------
+docker run -p 38282:8080 kodekloud/simple-webapp:blue
+
+docker run -v data_volume:/var/lib/mysql mysql
+
+below command runs redis conatiner(named redis) in the background (-d)
+-----------------------------------------
+docker run -d --name=redia redis
