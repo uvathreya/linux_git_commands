@@ -1,0 +1,76 @@
+start mongod initially and enable it
+----------------------------------------
+sudo systemctl start mongod
+sudo systemctl enable mongod
+
+check the connection status
+--------------------------------
+mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+
+enable authorization
+-----------------------
+edit file /etc/mongod.conf with below configuration
+------------------------------
+security:
+  authorization: enabled
+  
+start mongo shell
+-------------------
+mongo
+
+connect to admin database
+-------------------------
+use admin
+
+creating admin user
+--------------------
+db.createUser(
+  {
+    user: "mongoAdmin", 
+    pwd: "admin", 
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+exit shell
+-----------
+quit()
+
+shutdown runinning instance
+----------------------------
+db.shutdownServer();
+
+debugging server startup error
+------------------------------
+service mongod status
+
+authenticate to admin db as a mongoAdmin User
+------------------------------------------------------
+mongo -u mongoAdmin -p --authenticationDatabase admin
+
+change to database admin
+------------------------
+use admin
+
+show users
+-----------
+show users
+
+----------------
+use db1
+----------------
+mongo -u db1Admin -p --authenticationDatabase db1
+db.createUser(
+  {
+    user: "db1Admin", 
+    pwd: "db1Admin", 
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+------------------------------------------
+db.movie.insert({"name":"hellp mingo db"})
+------------------------------------------
+db.createCollection("collection1")
+------------------------------------------
+show collections
+------------------------------------------
