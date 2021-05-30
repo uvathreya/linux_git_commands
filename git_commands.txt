@@ -63,3 +63,12 @@ git branch -d localBranchName
 #delete branch remotely
 -----------------------
 git push origin --delete remoteBranchName
+
+Add  Git repository to existing repo on local
+---------------------------------------------------
+git remote add origin git@github.com:uvathreya/linux_git_commands.git
+
+
+change existing remote origin url
+----------------------------------
+git remote set-url origin git@github.com:uvathreya/linux_git_commands.git

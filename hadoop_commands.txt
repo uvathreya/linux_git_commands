@@ -1,0 +1,17 @@
+hadoop-3.2.2/sbin/start-dfs.sh
+hadoop-3.2.2/sbin/start-yarn.sh
+hadoop-3.2.2/sbin/jps
+hadoop-3.2.2/sbin/stop-dfs.sh
+hadoop-3.2.2/sbin/stop-yarn.sh
+
+
+#### Hadoop UI ####
+http://localhost:9870
+
+###### individual data nodes #########
+http://localhost:9864
+
+##### yarn #######
+http://localhost:8088
+
+ant jar -Dversion=3.2.2 -Declipse.home=/home/eclipse -Dhadoop.home=/home/hduser/hadoop-3.2.2

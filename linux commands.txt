@@ -22,3 +22,8 @@ remove directory recursively without prompt
 rm -rf <path to dir>
 
 cp -r hr_skill /opt/odoo/odoo/addons/
+
+create terminal commands shortcuts
+----------------------------------
+sudo gedit /etc/bash.bashrc
+alias jup='jupyter notebook'
