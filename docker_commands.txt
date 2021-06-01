@@ -7,3 +7,7 @@ docker run -v data_volume:/var/lib/mysql mysql
 below command runs redis conatiner(named redis) in the background (-d)
 -----------------------------------------
 docker run -d --name=redia redis
+
+to run the docker script
+--------------------------
+docker-compose up
