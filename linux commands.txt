@@ -23,7 +23,20 @@ rm -rf <path to dir>
 
 cp -r hr_skill /opt/odoo/odoo/addons/
 
-create terminal commands shortcuts
-----------------------------------
-sudo gedit /etc/bash.bashrc
-alias jup='jupyter notebook'
+create terminal commands shortcuts (aliases)
+-------------------------------------------
+1. Edit ~/.bash_aliases or ~/.bashrc file
+2. Append your bash alias (alias jup='jupyter notebook')
+4. Activate alias by typing: source ~/.bash_aliases
+5. maske sure ~/.bashrc file  has below lines included:
+	if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+	fi
+
+create a file using terminal
+-----------------------------
+touch test.txt
+
+list of installed apps on ubuntu
+--------------------------------
+apt list --installed 
